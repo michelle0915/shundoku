@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+* {
+    font-family: メイリオ;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --page-width: 600px;
+    --page-height: 600px;
+}
+
+body {
+    background: #eee;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 32pt;
+}
+
+#container {
+    position: relative;
+    width: var(--page-width);
+    height: var(--page-height);
+    margin: 0 auto;
+    border: solid 3px #aaa;
+    overflow: hidden;
+}
+
+#slider {
+    display: flex;
+    width: calc(var(--page-width) * 8);
+    height: var(--page-height);
+    margin-left: 0;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: var(--page-width);
+    height: calc(var(--page-height) - 20);
+    font-size: 40px;
+}
+
+.question {
+    text-align: left;
+}
+
+button {
+    font-size: 32pt;
+    width: 400px;
+    padding: 10px;
+    border: solid 5px #888;
+    border-radius: 10px;
+    outline: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f88;
+    color: #fff;
+}
+
+.start {
+    display: none;
+}
+
+.ready .start {
+    display: inline-block;
+}
+
+.next {
+    display: none;
+}
+
+.completed .question {
+    display: none;
+}
+
+.completed .next {
+    display: inline-block;
+}
+
+#countdown {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 100px;
+    z-index: 100;
+}
+
+#level1 span, #level5 span {
+    display: inline-block;
+    writing-mode: vertical-rl;
+}
+
+#level2 span, #level6 span {
+    display: inline-block;
+}
+
+#qindex {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20pt;
+}
+
+#controller {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    width: 250px;
+    background-color: rgba(255,255,255,0.7)
+}
+
+#controller p {
+    font-size: 20pt;
+    margin-bottom: 30px;
+}
+
+#controller span {
+    display: inline-block;
+    width: 60px;
+}
+
+#controller #rest {
+    display: inline-block;
+    width: 120px;
+}
+
+#controller i {
+    cursor: pointer;
+}

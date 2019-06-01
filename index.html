@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>瞬読アプリ</title>
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/shundoku.css">
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/shundoku.js"></script>
+    </head>
+    <body>
+        <h1>瞬読アプリ</h1>
+        <div id="container">
+            <div id="slider">
+                <div class="page completed">
+                    <button class="next">トレーニング開始</button>
+                </div>
+                <div class="page ready">
+                    <button id="start1" class="start">Level1</button>
+                    <div id="level1" class="question"></div>
+                    <button class="next">次へ</button>
+                </div>
+                <div class="page ready">
+                    <button id="start2" class="start">Level2</button>
+                    <div id="level2" class="question"></div>
+                    <button class="next">次へ</button>
+                </div>
+                <div class="page ready">
+                    <button id="start3" class="start">Level3</button>
+                    <div id="level3" class="question"></div>
+                    <button class="next">次へ</button>
+                </div>
+                <div class="page ready">
+                    <button id="start4" class="start">Level4</button>
+                    <div id="level4" class="question"></div>
+                    <button class="next">次へ</button>
+                </div>
+                <div class="page ready">
+                    <button id="start5" class="start">Level5</button>
+                    <div id="level5" class="question"></div>
+                    <button class="next">次へ</button>
+                </div>
+                <div class="page ready">
+                    <button id="start6" class="start">Level6</button>
+                    <div id="level6" class="question"></div>
+                    <button class="next">次へ</button>
+                </div>
+                <div class="page">
+                    <p>おつかれさまでした</p>
+                </div>
+            </div>
+            <span id="countdown"></span>
+            <span id="qindex"></span>
+        </div>
+        <div id="controller">
+            <p>[設定]</p>
+            <p>
+                問題表示時間[秒]<br>
+                <i class="qinterval-control fas fa-minus-circle" data-value="-1"></i>
+                <span id="qinterval"></span>
+                <i class="qinterval-control fas fa-plus-circle" data-value="1"></i>
+            </p>
+            <p>
+                レベル毎の問題数<br>
+                <i class="qnum-control fas fa-minus-circle" data-value="-1"></i>
+                <span id="qnum"></span>
+                <i class="qnum-control fas fa-plus-circle" data-value="1"></i>
+            </p>
+            <p id="approximate-time">
+                推定残り時間<br>
+                <span id="rest"></span>
+            </p>
+        </div>
+    </body>
+</html>
